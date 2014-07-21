@@ -7,8 +7,8 @@ defaults: &defaults
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: postgres
-  password: lophyounee86
+  username: macbook
+  password: 
   host: localhost
   port: 5432
     
