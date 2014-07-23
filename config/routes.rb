@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  resources :students
+
+  mount Ckeditor::Engine => '/ckeditor'
+  resources :pages
+
+  resources :lectures
+
+  resources :courses
+
+  root 'home#index'
+  get '/sambutan' => 'pages#show', :defaults => {:id => '2'}
+  get '/matakuliah' => 'courses#index'
+  get '/staf_pengajar' => 'lectures#index'
+  get '/visi_dan_misi' => 'pages#show', :defaults => { :id => '1'} 
+  get '/kode_etik_perkuliahan' => 'pages#show', :defaults => {:id => '3'}
+  get '/kode_etik_mid_final_test' => 'pages#show', :defaults => {:id => '4'}
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

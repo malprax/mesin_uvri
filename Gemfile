@@ -8,8 +8,6 @@ gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 
-# stylesheets
-gem "twitter-bootstrap-rails"
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -29,12 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
-
-#quiet assets
- gem 'quiet_assets'  
  
-#webserver
-gem 'puma' 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -46,4 +39,67 @@ gem 'puma'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+#quiet assets
+ gem 'quiet_assets'  
+ 
+#user_authentication
+gem 'devise'
+
+
+#twitter_bootstrap
+gem 'therubyracer', platforms: :ruby
+gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem 'twitter-bootstrap-rails'
+
+#user_authority
+gem 'cancan'
+
+#localserver
+gem 'puma'
+
+#cloudfolder
+# gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'paperclip-dropbox'
+# gem 'dropbox'
+# gem 'cocaine'
+# gem 'dropbox-sdk'
+
+#securityform
+gem 'honeypot-captcha'
+
+# location, maps, route
+gem 'gmaps4rails', ">=2.0"
+gem 'geocoder'
+
+#organization chart
+gem 'google_visualr', "~> 2.3.0"
+
+# upload file
+gem 'carrierwave'
+gem 'fog'
+gem 'mini_magick'
+gem 'rmagick' 
+gem 'unf' 
+
+#editor
+gem "ckeditor", :git => "https://github.com/galetahub/ckeditor.git"
+
+#to highlights words in views
+gem 'coderay'
+
+#notifier
+gem 'uniform_notifier'
+
+# Periodically check your error monitoring tool, if you see some part of ckeditor try to load unexisting non-digest asset - if so just add it in the ckeditor rake task.
+gem 'non-stupid-digest-assets', '~> 1.0.4'
+
+#to-add_sortable position in columns
+gem 'acts_as_list'
+
+#cache
+gem 'memcachier'
+gem 'dalli'
+
+
 
